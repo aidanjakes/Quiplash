@@ -1,0 +1,112 @@
+body {
+    background-image: url('/static/backg.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #acc5d0;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.title {
+    position: relative;
+    z-index: 2;
+    font-size: 8em;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    transform: rotate(-10deg);
+    text-shadow: 1px 1px hsl(50, 50%, 45%),
+                2px 2px hsl(50, 50%, 40%),
+                3px 3px hsl(50, 50%, 35%),
+                4px 4px hsl(50, 50%, 34%),
+                5px 5px hsl(50, 50%, 33%),
+                6px 6px hsl(50, 50%, 32%),
+                7px 7px hsl(50, 50%, 31%),
+                8px 8px hsl(50, 50%, 30%),
+                9px 9px hsl(50, 50%, 29%),
+                10px 10px hsl(50, 50%, 28%),
+                10px 10px 30px rgba(0,0,0,.7), 
+}  
+.titleText {
+    cursor: pointer;
+    text-align: center;
+    color: transparent;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    background: url(https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif);
+    background-size: contain;
+    background-position: top left;
+    -webkit-background-clip: text;
+}
+.container {
+    background-color: rgba(255,255,255,0.8);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: fit-content;
+    border-radius: 10px;
+}
+.registerButtonBox{
+    width: 25%;
+    margin: 0 auto;
+}
+.buttonBox{
+    width: 40%;
+    margin: 0 auto;
+
+}
+
+.waiting{
+    height: 70vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+.waiting h2,h4,p,strong{
+    text-align: center;
+}
+
+.prompts {
+    text-align: center;
+}
+
+.prompts button{
+    margin-bottom: 2px;
+}
+
+.prompts textarea {
+    width: 420px;
+    height: 150px;
+  }
+
+.textAlignCenter {
+    text-align: center;
+}
+.voteAdminButton{
+    margin-top: 3px;
+}
+
+.endOfRoundButtons{
+    margin: 2px;
+}
+  
+#chat { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: auto;
+    max-height: 80vh;
+}
+#chat li { 
+    padding: 5px 10px; 
+}
+#chat li:nth-child(odd) { 
+    background-color: rgba(0,0,0,0.2); 
+}

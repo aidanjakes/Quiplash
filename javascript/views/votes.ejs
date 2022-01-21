@@ -1,0 +1,24 @@
+<div class="textAlignCenter">
+    <h2>Vote for the funniest</h2>
+    <div v-for="(item, key, index) in promptsToAnswersAuthors">
+        <div v-if="index == promptAnswerIndex && !alreadyVoted">
+            <p>{{key}}</p>
+            <button class="btn btn-primary" @click="vote(key,item[0].answer,item[0].author)">
+                {{item[0].answer}}</button>
+            <button class="btn btn-primary" @click="vote(key,item[1].answer,item[1].author)">
+                {{item[1].answer}}</button>
+        </div>  
+    </div>
+    <div class ="voteAdminButton">
+        <div v-if="me.admin">
+            <button class="btn btn-lg btn-success" @click="admin('showPromptResults')">Next</button>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+
+
+

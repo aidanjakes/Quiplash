@@ -1,0 +1,12 @@
+<div class='textAlignCenter'>
+    <div v-for="(item, key, index) in promptsToAnswersAuthors">
+        <div v-if="index == promptAnswerIndex">
+            <h3>{{key}}</h3>
+        </div>  
+    </div>
+    <h5>{{promptResults.results1.answer}} received {{promptResults.results1.numVotes}} votes!</h5>
+    <h5>{{promptResults.results2.answer}} received {{promptResults.results2.numVotes}} votes!</h5>
+    <div v-if="me.admin">
+        <button class="btn btn-lg btn-success" @click="admin('showNextPromptForVotes')">Next</button>
+    </div>
+</div>

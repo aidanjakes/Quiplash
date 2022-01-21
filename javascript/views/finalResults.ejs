@@ -1,0 +1,9 @@
+<div class='textAlignCenter'>
+    <h2>Final Results!</h2>
+    <div v-for="(value, index, key) in players">
+        <h5>{{value.name}}: {{value.score}}</h5>
+    </div>
+    <div v-if="me.admin">
+        <button class="btn btn-lg btn-success" @click="admin('endGame')">END GAME</button>
+    </div>
+</div>

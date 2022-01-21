@@ -1,0 +1,25 @@
+<div class="waiting">
+    <h2>Waiting for Game to Start</h2>
+    <div v-if="me.admin">
+        <button class="btn btn-lg btn-success" @click="admin('start')">Start Game</button>
+    </div>
+    <h4>Current Players: </h4>
+    <div class='prompts'>
+        <div v-for="player in players">
+            <div v-if="player.role == 'player'">
+                <strong>{{player.name}}</strong>
+            </div>
+        </div>
+    </div>
+    
+    <h4>In Audience: </h4>
+    <div class='prompts'>
+        <div v-for="player in players">
+            <div v-if="player.role == 'audience'">
+                <strong>{{player.name}}</strong>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

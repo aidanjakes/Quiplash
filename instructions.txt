@@ -1,0 +1,23 @@
+The game can be found at: "https://quiplash-coursework-333603.nw.r.appspot.com/" or equally run locally
+Players can log in or register, if more than 8 players have joined or a game is in progress then the player will be added to the audience.
+The first user to log in/register will be the admin, they act as any other player but only they can decide to advance the game.
+The game consists of 3 rounds.
+Each round consists of:
+	-entering prompts (if not enough prompts are added then prompts will be randomly drawn from azure database)
+	-each player (non audience) will then receive 1 or 2 prompts depending on if number of players is even or odd
+	-each player (including audience) will vote for what they feel is the best answer
+	-the number of votes each prompt received will then be shown
+	-this process of voting and displaying prompt results is repeated until there are no more prompts for this round,
+		in which case show the round results
+	-the players scores will then be shown at the end of the round
+A player receives 100*roundnumber score for each vote
+Once all 3 rounds have been played a game leaderboard will be displayed
+Once all 3 games have been played the admin will have the option to end the game, this will log out all users and 
+	everyone will be taken to the sign in page
+NOTES:
+If the admin leaves then the admin should be reallocated to another player
+If possible, half the prompts will be user submitted and half from the azure database but if not then the numbers of prompts required 
+will be randomly selected from the database.
+If a user is already logged in they should not be able to log in again
+
+	

@@ -1,0 +1,10 @@
+
+<div class="prompts">
+    <h2>Enter prompts</h2>
+    <textarea v-model="promptToSubmit" placeholder="Enter a prompt"></textarea>
+    <h5>{{error}}</h5>
+    <button class="btn btn-primary" @click="submitPrompt">Submit</button>
+    <div v-if="me.admin">
+        <button class="btn btn-lg btn-success" @click="admin('startAnswers')">Next</button>
+    </div>
+</div>

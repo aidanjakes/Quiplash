@@ -1,0 +1,21 @@
+<div class='prompts'>
+    <div v-if="me.role=='audience'">
+    </div>
+    <div v-else>
+        <div v-if="!promptOneSubmitted">
+            <h4>{{me.promptToAnswerOne}}</h4>
+        </div>
+        <div v-else-if="promptToAnswerTwo != '' && !promptTwoSubmitted" >
+            <h4>{{me.promptToAnswerTwo}}</h4>
+        </div>
+        <textarea v-model="answerToSubmit" type="text" placeholder="Enter an answer"></textarea>
+        <div v-if="!((!hasTwoPrompts && promptOneSubmitted) || (hasTwoPrompts && promptTwoSubmitted))">
+            <button class="btn btn-primary" @click="submitAnswer">Submit</button>
+        </div>
+        <div v-if="me.admin">
+            <button class="btn btn-lg btn-success" @click="admin('startVoting')">Next</button>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+    <%- include('header'); -%>
+
+    <div class="titleText"> QUIPLASH</div>
+    <div id="game">
+        <div v-if="connected">
+            <div v-if="state.state==0">
+                <div v-if="loggedIn == false">
+                    <div v-if="alreadyRegistered">
+                        <%- include('login'); -%>
+                    </div>
+                    <div v-else>
+                        <%- include('register'); -%>
+                    </div>
+                </div>
+                <div v-else-if="loggedIn">
+                    <%- include('waiting') -%>
+                </div>
+            </div>
+            <div v-else-if="state.state==1">
+                <%- include('prompts') -%>
+            </div>
+            <div v-else-if="state.state==2">
+                <%- include('answer') -%>
+            </div>
+            <div v-else-if="state.state==3">
+                <%- include('votes') -%>
+            </div>
+            <div v-else-if="state.state==4">
+                <%- include('promptResults') -%>
+            </div>
+            <div v-else-if="state.state==5">
+                <%- include('endOfRoundResults') -%>
+            </div>
+            <div v-else-if="state.state==6">
+                <%- include('finalResults') -%>
+            </div>
+            
+            
+        
+            <!-- <%- include('register'); -%> -->
+        </div>
+        <div v-else>
+            <p>Connecting...</p>
+        </div>
+    </div>
+
+    <%- include('footer'); -%>
+
+</html>

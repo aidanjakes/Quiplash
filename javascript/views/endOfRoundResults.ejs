@@ -1,0 +1,12 @@
+<div class='textAlignCenter'>
+    <h2>Round {{state.rounds}} Results</h2>
+    <div v-for="(value, index, key) in players">
+        <h5>{{value.name}}: {{value.score}}</h5>
+    </div>
+    <div class='endOfRoundButtons'>
+        <div v-if="me.admin">
+            <button class="btn btn-lg btn-success" @click="admin('nextRound')">Next Round</button>
+        </div>
+    </div>
+    
+</div>
